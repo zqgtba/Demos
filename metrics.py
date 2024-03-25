@@ -13,6 +13,8 @@ def calculate_nrmse_fastmri(gt, pred):
     """Compute normalized root mean-squared error (NRMSE)"""
     return normalized_root_mse(gt, pred)
 
+# check if the data need to be normlized!
+
 label = fastmri.complex_abs(label).cpu().detach().numpy()
 pred = fastmri.complex_abs(pred).cpu().detach().numpy()
 
